@@ -1,5 +1,4 @@
 // Selectores DOM para los inputs del formulario
-
 const form = document.querySelector('form');
 const nombreInput = document.getElementById('nombre');
 const emailInput = document.getElementById('email');
@@ -8,6 +7,22 @@ const tecnicaInput = document.getElementById('carrera');
 const ingresosInput = document.getElementById('ingresos');
 const mensajeInput = document.getElementById('mensaje');
 
+// Seleccionamos el botón
+const boton = document.querySelector('button');
+
+// Evento cuando el mouse pasa sobre el botón
+boton.addEventListener('mouseover', () => {
+  boton.classList.remove('bg-blue-700');
+  boton.classList.add('bg-green-600');
+});
+
+// Evento cuando el mouse sale del botón
+boton.addEventListener('mouseout', () => {
+  boton.classList.remove('bg-green-600');
+  boton.classList.add('bg-blue-700');
+});
+
+// Evento cuando se envía el formulario
 form.addEventListener('submit', function (e) {
   e.preventDefault(); 
 
